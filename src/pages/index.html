@@ -1,0 +1,145 @@
+<!--META {"title":"SnowCow — Live Snow Forecasts, Ski Resort Guides & Free Ski Trip Quotes","description":"Live 7-day snow forecasts for 55+ ski resorts worldwide, a Powder Watch leaderboard, resort finder, gear guides, size calculators and free custom ski trip quotes.","nav":"home","priority":"1.0","faq":[["Where is the most snow forecast this week?","SnowCow's Powder Watch ranks 55+ major ski resorts by forecast snowfall for the next 7 days, updated from weather-model data every time you load the page."],["Is the SnowCow trip quote free?","Yes. You tell us your dates, group and budget; we match you with vetted ski travel specialists who send options. There is no fee and no obligation."],["How accurate are the snow forecasts?","They come from global weather models adjusted to mid-mountain elevation. They are reliable for spotting storms 1-5 days out; always check the resort's official report before you go."]]} META-->
+<section class="hero" style="padding:0">
+  <div class="snowfall" aria-hidden="true"></div>
+  <svg class="mountains" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 400 L0 260 L160 150 L260 220 L420 80 L560 210 L700 120 L860 250 L1000 110 L1160 230 L1300 140 L1440 220 L1440 400Z" fill="#2c5d97" opacity=".45"/>
+    <path d="M0 400 L0 300 L200 200 L330 270 L520 160 L700 290 L880 180 L1050 290 L1240 190 L1440 280 L1440 400Z" fill="#dfeeff" opacity=".9"/>
+    <path d="M520 160 L560 190 L540 188 L520 210 L500 186 L480 190Z M880 180 L915 205 L895 204 L880 222 L865 204 L848 206Z" fill="#fff"/>
+    <path d="M0 400 L0 340 L240 290 L480 340 L760 300 L1040 350 L1300 310 L1440 340 L1440 400Z" fill="var(--bg)"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">❄️ Live snow forecasts · 55+ resorts · 6 continents</span>
+    <h1>Chase the snow.<br>Plan the perfect ski trip.</h1>
+    <p class="lead">Live 7-day snow forecasts, honest resort guides, gear advice and <b>free custom trip quotes</b> from vetted ski travel specialists — all in one herd-approved place.</p>
+    <form class="hero-search" id="heroSearchForm" role="search" autocomplete="off">
+      <label class="sr-only" for="heroSearch">Search ski resorts</label>
+      <input id="heroSearch" type="search" placeholder="Search a resort, country or region… e.g. Whistler, Japan, Alps">
+      <button class="btn btn-primary" type="submit">Snow report</button>
+    </form>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn btn-light" href="{root}trip-planner.html">🎿 Get free trip quotes</a>
+      <a class="btn btn-ghost" href="{root}resorts.html" style="color:#fff">Browse resorts</a>
+    </div>
+    <div class="hero-stats">
+      <div>55+<small>resorts tracked live</small></div>
+      <div>7-day<small>snow forecasts</small></div>
+      <div>4<small>free planning tools</small></div>
+      <div>$0<small>trip quotes, no obligation</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot" data-ad="leaderboard"></div>
+
+<section style="padding-top:24px">
+  <div class="container">
+    <div class="grid g2" style="align-items:start">
+      <div class="card">
+        <div class="section-head" style="margin-bottom:8px">
+          <div><span class="badge hot">Live</span><h2 class="mt1" style="margin-bottom:0">Powder Watch 🏆</h2><p>Where the most snow is forecast in the next 7 days.</p></div>
+          <div class="toggle-group units-toggle" role="group" aria-label="Units"><button data-u="metric">cm</button><button data-u="imperial">in</button></div>
+        </div>
+        <div class="powder-rank" id="powderWatch" aria-live="polite">
+          <div class="skeleton" style="height:48px;margin:8px 0"></div><div class="skeleton" style="height:48px;margin:8px 0"></div><div class="skeleton" style="height:48px;margin:8px 0"></div><div class="skeleton" style="height:48px;margin:8px 0"></div>
+        </div>
+        <p class="form-note mt1"><span id="pwUpdated"></span> · Weather-model estimates at mid-mountain. <a href="{root}snow-report.html">Full snow reports →</a></p>
+      </div>
+      <div class="stack">
+        <div class="cta-band" style="grid-template-columns:1fr">
+          <div><h2 style="margin-bottom:6px">Found the powder? Get there cheaper.</h2><p>Tell us your dates and budget — ski travel specialists compete to build your trip: lodging, lift tickets, rentals, lessons and transfers.</p></div>
+          <div class="actions" style="justify-content:flex-start"><a class="btn btn-light" href="{root}trip-planner.html">Start my free quote →</a></div>
+        </div>
+        <div class="grid g2">
+          <a class="tile" href="{root}tools.html#compare"><span class="ico">⚖️</span><strong>Compare resorts</strong><span>Side-by-side snow, elevation & pass</span></a>
+          <a class="tile" href="{root}tools.html#budget"><span class="ico">💸</span><strong>Trip budget</strong><span>Know your real cost in 30 seconds</span></a>
+          <a class="tile" href="{root}tools.html#ski"><span class="ico">🎿</span><strong>Ski length</strong><span>Find your perfect ski size</span></a>
+          <a class="tile" href="{root}tools.html#snowboard"><span class="ico">🏂</span><strong>Board size</strong><span>Height, weight & style based</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Find your mountain</h2><p>Pick a travel style — we'll show resorts that fit.</p></div><a class="btn btn-secondary btn-sm" href="{root}resorts.html">All resorts →</a></div>
+    <div class="grid g4">
+      <a class="tile" href="{root}resorts.html?tag=powder"><span class="ico">🌨</span><strong>Powder hounds</strong><span>Deepest snow, steepest lines</span></a>
+      <a class="tile" href="{root}resorts.html?tag=family"><span class="ico">👨‍👩‍👧</span><strong>Family trips</strong><span>Ski schools, easy slopes, kid-friendly</span></a>
+      <a class="tile" href="{root}resorts.html?tag=beginner"><span class="ico">🐣</span><strong>First-timers</strong><span>Gentle terrain & great lessons</span></a>
+      <a class="tile" href="{root}resorts.html?tag=luxury"><span class="ico">🥂</span><strong>Luxury escapes</strong><span>Five-star chalets & fine dining</span></a>
+      <a class="tile" href="{root}resorts.html?tag=nightlife"><span class="ico">🎉</span><strong>Après & nightlife</strong><span>Best parties after last chair</span></a>
+      <a class="tile" href="{root}resorts.html?tag=value"><span class="ico">💰</span><strong>Great value</strong><span>More skiing for less money</span></a>
+      <a class="tile" href="{root}resorts.html?tag=snowsure"><span class="ico">🏔</span><strong>Snow-sure</strong><span>High-altitude & glacier resorts</span></a>
+      <a class="tile" href="{root}resorts.html?region=Asia"><span class="ico">🗾</span><strong>Japan & Asia</strong><span>Legendary light, dry powder</span></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><h2>Plan smarter with our guides</h2><p>Straight answers to the questions every skier and snowboarder asks.</p></div><a class="btn btn-secondary btn-sm" href="{root}guides.html">All guides →</a></div>
+    <div class="grid g3">
+      <a class="card card-link" href="{root}guides/epic-vs-ikon-pass.html"><span class="badge">Passes</span><h3 class="mt1">Epic vs Ikon: which ski pass is right for you?</h3><p>The decision framework — days skied, home mountain, travel plans and blackout dates.</p></a>
+      <a class="card card-link" href="{root}guides/first-ski-trip-beginners-guide.html"><span class="badge">Beginners</span><h3 class="mt1">Your first ski trip: the complete beginner’s guide</h3><p>What to book, what to wear, how lessons work and how not to waste money.</p></a>
+      <a class="card card-link" href="{root}guides/best-time-to-ski.html"><span class="badge">Timing</span><h3 class="mt1">When is the best time to go skiing?</h3><p>Month-by-month snow, crowds and prices for North America, Europe and Japan.</p></a>
+      <a class="card card-link" href="{root}guides/ski-trip-budget-guide.html"><span class="badge">Money</span><h3 class="mt1">How much does a ski trip cost — and how to cut it</h3><p>Real cost breakdown plus 15 proven ways to save.</p></a>
+      <a class="card card-link" href="{root}guides/how-to-layer-for-skiing.html"><span class="badge">Gear</span><h3 class="mt1">How to layer for skiing & snowboarding</h3><p>Base, mid and shell layers explained for every temperature.</p></a>
+      <a class="card card-link" href="{root}guides/ski-trip-packing-checklist.html"><span class="badge">Checklist</span><h3 class="mt1">The ultimate ski trip packing checklist</h3><p>Printable list so you never forget goggles (or sunscreen) again.</p></a>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot rect" data-ad="inArticle"></div>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Watch & learn 🎥</h2><p>Hand-picked lessons from top instructors. Tap to play.</p></div><a class="btn btn-secondary btn-sm" href="{root}videos.html">Video hub →</a></div>
+    <div class="grid g3">
+      <div><div class="video" data-yt="_yfFGDuJ2g0" data-title="How to ski: 10 beginner skills for the first day"></div><div class="video-meta"><h3>10 beginner skills for your first ski day</h3><p class="muted">Ski lesson · beginner</p></div></div>
+      <div><div class="video" data-yt="eWcw15G8ANU" data-title="How to snowboard on your first day"></div><div class="video-meta"><h3>Snowboarding on your first day</h3><p class="muted">Snowboard lesson · beginner</p></div></div>
+      <div><div class="video" data-yt="14nAUho6Mh4" data-title="Complete beginner skiing tutorial"></div><div class="video-meta"><h3>From first turns to parallel skis</h3><p class="muted">Ski lesson · progression</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid g2">
+      <div class="dark-band">
+        <span class="eyebrow">🏆 Contest open</span>
+        <h2 class="mt1" style="color:#fff">Shot of the Season Photo Contest</h2>
+        <p>Share your best mountain moment. Monthly winners get gear & gift-card prizes — the season champion wins a ski trip package.</p>
+        <a class="btn btn-primary" href="{root}contests.html">Enter free →</a>
+      </div>
+      <div class="card">
+        <span class="badge">Community-funded</span>
+        <h2 class="mt1">Keep SnowCow free for everyone</h2>
+        <p>Your support funds live-forecast infrastructure, new guides, local snow reporters, contests & prizes. Every dollar is reinvested.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="{root}donate.html">❤️ Support us</a><a class="btn btn-ghost" href="{root}advertise.html">Sponsor a section</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <h2 class="center">How the free trip quote works</h2>
+    <div class="grid g3 steps-how mt2">
+      <div class="card"><h3>Tell us your trip</h3><p>Destination (or “surprise me”), dates, group size, budget and what you need. Takes 90 seconds.</p></div>
+      <div class="card"><h3>Specialists build options</h3><p>Vetted ski travel partners create packages — lodging, lifts, rentals, lessons, transfers.</p></div>
+      <div class="card"><h3>Compare & book</h3><p>Pick the best offer, or don't. No fees, no spam, no obligation — ever.</p></div>
+    </div>
+    <p class="center mt2"><a class="btn btn-primary" href="{root}trip-planner.html">Get my free quotes →</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:860px">
+    <h2 class="center">Frequently asked questions</h2>
+    <details class="faq"><summary>Where is the most snow forecast this week?</summary><p>Check Powder Watch above — it ranks 55+ major resorts by forecast snowfall for the next 7 days, pulled live from weather-model data every time you load the page.</p></details>
+    <details class="faq"><summary>Is the SnowCow trip quote really free?</summary><p>Yes. You tell us your dates, group and budget; we match you with vetted ski travel specialists who send options. There is no fee and no obligation.</p></details>
+    <details class="faq"><summary>How accurate are the snow forecasts?</summary><p>They come from global weather models adjusted to mid-mountain elevation. They're reliable for spotting storms 1–5 days out. Always check the resort's official snow report and local avalanche bulletin before heading out.</p></details>
+    <details class="faq"><summary>Can my resort, shop or brand advertise on SnowCow?</summary><p>Absolutely — we offer display, sponsored guides, newsletter placements, contest sponsorship and qualified trip leads. <a href="{root}advertise.html">See the media kit</a>.</p></details>
+  </div>
+</section>
