@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ski Tools: Ski Length &amp; Snowboard Size Calculators, Trip Budget, Resort Compare | SnowCow</title>
+<meta name="description" content="Free ski length calculator, snowboard size calculator, ski trip budget calculator and a live side-by-side resort comparison with 7-day snow forecasts.">
+<link rel="canonical" href="https://webworksa1.github.io/snowcow-com/tools.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b2545">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SnowCow">
+<meta property="og:title" content="Ski Tools: Ski Length &amp; Snowboard Size Calculators, Trip Budget, Resort Compare | SnowCow">
+<meta property="og:description" content="Free ski length calculator, snowboard size calculator, ski trip budget calculator and a live side-by-side resort comparison with 7-day snow forecasts.">
+<meta property="og:url" content="https://webworksa1.github.io/snowcow-com/tools.html">
+<meta property="og:image" content="https://webworksa1.github.io/snowcow-com/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem("sc_theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://webworksa1.github.io/snowcow-com/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://webworksa1.github.io/snowcow-com/tools.html"}]}</script>
+</head>
+<body data-root="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note">
+  <a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a>
+</div>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="SnowCow home"><img src="assets/img/logo.svg" alt="" width="40" height="40"><span>Snow<b>Cow</b></span></a>
+    <ul class="nav-links"><li><a href="snow-report.html">Snow Report</a></li><li><a href="resorts.html">Resorts</a></li><li><a href="guides.html">Guides</a></li><li><a href="gear.html">Gear</a></li><li><a href="videos.html">Videos</a></li><li><a href="tools.html" aria-current="page">Tools</a></li><li><a href="contests.html">Contests</a></li><li><a href="donate.html">Support</a></li></ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" href="trip-planner.html">Free Trip Quote</a>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+    </div>
+  </nav>
+  <div class="mobile-menu container" id="mobileMenu"><a href="trip-planner.html">🎿 Free Trip Quote</a><a href="snow-report.html">Snow Report</a><a href="resorts.html">Resorts</a><a href="guides.html">Guides</a><a href="gear.html">Gear</a><a href="videos.html">Videos</a><a href="tools.html">Tools</a><a href="contests.html">Contests</a><a href="donate.html">Support</a><a href="learn.html">Learn to Ski & Ride</a><a href="advertise.html">Advertise & Sponsor</a><a href="careers.html">Careers</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="index.html">Home</a> › Tools</div>
+    <h1>Free Ski & Snowboard Tools</h1>
+    <p>Size your gear, budget your trip and compare resorts side-by-side with live snow forecasts.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-light btn-sm" href="#compare">⚖️ Compare</a><a class="btn btn-light btn-sm" href="#budget">💸 Budget</a><a class="btn btn-light btn-sm" href="#ski">🎿 Ski length</a><a class="btn btn-light btn-sm" href="#snowboard">🏂 Board size</a></div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <h2>⚖️ Compare resorts side-by-side</h2>
+    <p class="muted">Pick up to three resorts — we’ll pull the live 7-day forecast for each.</p>
+    <div id="compareTool">
+      <div class="grid g3"><div><label for="c1">Resort 1</label><select id="c1" data-cmp></select></div><div><label for="c2">Resort 2</label><select id="c2" data-cmp></select></div><div><label for="c3">Resort 3</label><select id="c3" data-cmp></select></div></div>
+      <div id="compareOut" class="mt2"></div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot" data-ad="leaderboard"></div>
+
+<section id="budget" class="section-alt">
+  <div class="container">
+    <h2>💸 Ski trip budget calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="budgetCalc">
+        <div class="row three">
+          <div class="field"><label for="bPeople">People</label><input id="bPeople" type="number" min="1" value="2"></div>
+          <div class="field"><label for="bNights">Nights</label><input id="bNights" type="number" min="1" value="6"></div>
+          <div class="field"><label for="bDays">Ski days</label><input id="bDays" type="number" min="1" value="5"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="bLodging">Lodging per room / night ($)</label><input id="bLodging" type="number" min="0" value="250"></div>
+          <div class="field"><label for="bLift">Lift ticket per day ($)</label><input id="bLift" type="number" min="0" value="150"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="bTravel">Travel per person ($)</label><input id="bTravel" type="number" min="0" value="450"></div>
+          <div class="field"><label for="bFood">Food & après per person / day ($)</label><input id="bFood" type="number" min="0" value="80"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label class="check"><input type="checkbox" id="bRent" checked> Rentals ($/day)</label><input id="bRentCost" type="number" min="0" value="60"></div>
+          <div class="field"><label class="check"><input type="checkbox" id="bLessons"> Lessons ($ total pp)</label><input id="bLessonCost" type="number" min="0" value="400"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="bIns" checked> Include travel insurance estimate</label>
+        <button class="btn btn-primary mt1" type="submit">Calculate</button>
+      </form>
+      <div class="card"><h3>Your estimated trip cost</h3><div id="budOut"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ski">
+  <div class="container">
+    <h2>🎿 Ski length calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="skiCalc">
+        <div class="row three">
+          <div class="field"><label for="skiUnit">Units</label><select id="skiUnit"><option value="metric">cm / kg</option><option value="imperial">in / lb</option></select></div>
+          <div class="field"><label for="skiHeight">Height</label><input id="skiHeight" type="number" min="80" placeholder="175"></div>
+          <div class="field"><label for="skiWeight">Weight</label><input id="skiWeight" type="number" min="15" placeholder="72"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="skiLevel">Ability</label><select id="skiLevel"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option><option value="expert">Expert</option></select></div>
+          <div class="field"><label for="skiTerrain">Favourite terrain</label><select id="skiTerrain"><option value="groomers">Groomed runs</option><option value="allmountain" selected>All-mountain</option><option value="powder">Powder / off-piste</option><option value="park">Park & tricks</option></select></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Get my ski length</button>
+      </form>
+      <div class="card"><h3>Your result</h3><div id="skiOut"><p class="muted">Enter your height to see your recommended ski length range.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="snowboard" class="section-alt">
+  <div class="container">
+    <h2>🏂 Snowboard size calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="sbCalc">
+        <div class="row three">
+          <div class="field"><label for="sbUnit">Units</label><select id="sbUnit"><option value="metric">cm / kg</option><option value="imperial">in / lb</option></select></div>
+          <div class="field"><label for="sbHeight">Height</label><input id="sbHeight" type="number" min="80" placeholder="178"></div>
+          <div class="field"><label for="sbWeight">Weight</label><input id="sbWeight" type="number" min="15" placeholder="75"></div>
+        </div>
+        <div class="row three">
+          <div class="field"><label for="sbBoot">Boot size (US men’s)</label><input id="sbBoot" type="number" min="3" max="16" step="0.5" placeholder="10"></div>
+          <div class="field"><label for="sbStyle">Riding style</label><select id="sbStyle"><option value="freestyle">Freestyle / park</option><option value="allmountain" selected>All-mountain</option><option value="freeride">Freeride / powder</option></select></div>
+          <div class="field"><label for="sbLevel">Ability</label><select id="sbLevel"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option></select></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Get my board size</button>
+      </form>
+      <div class="card"><h3>Your result</h3><div id="sbOut"><p class="muted">Enter your height and weight to see your board length range.</p></div></div>
+    </div>
+    <p class="notice mt2">Calculators give general starting points. Binding (DIN) settings must always be set by a certified ski technician.</p>
+  </div>
+</section>
+
+</main>
+<section class="newsletter" aria-labelledby="nl-h">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h2 id="nl-h" style="color:#fff">Get Powder Alerts & Deals ❄️</h2>
+        <p>One smart email when big storms line up, plus lift-ticket deals, trip giveaways and new guides. Free. Unsubscribe anytime.</p>
+      </div>
+      <form class="sc-form" data-subject="Newsletter / Powder Alerts signup" data-success="🎉 You're on the list! Watch your inbox for the next powder alert.">
+        <label class="sr-only" for="nlEmail">Email</label>
+        <input id="nlEmail" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
+        <label class="sr-only" for="nlInt">Interest</label>
+        <select id="nlInt" name="interest"><option>Powder alerts</option><option>Trip deals</option><option>Gear deals</option><option>Contests & giveaways</option><option>All of it</option></select>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+<div class="ad-slot" data-ad="footer"></div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.svg" alt="" width="40" height="40"><span>Snow<b>Cow</b></span></a>
+        <p class="mt1">Independent snow forecasts, resort guides, gear advice and free trip planning for skiers & snowboarders worldwide.</p>
+        <div class="social">
+          <a data-social="youtube" href="#" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+          <a data-social="instagram" href="#" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+          <a data-social="tiktok" href="#" aria-label="TikTok" target="_blank" rel="noopener">♪</a>
+          <a data-social="x" href="#" aria-label="X" target="_blank" rel="noopener">𝕏</a>
+          <a data-social="facebook" href="#" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+          <a data-social="pinterest" href="#" aria-label="Pinterest" target="_blank" rel="noopener">P</a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul>
+        <li><a href="snow-report.html">Snow Reports</a></li><li><a href="resorts.html">Resort Finder</a></li>
+        <li><a href="tools.html#compare">Compare Resorts</a></li><li><a href="videos.html">Videos</a></li><li><a href="guides.html">Guides</a></li></ul></div>
+      <div><h4>Plan</h4><ul>
+        <li><a href="trip-planner.html">Free Trip Quote</a></li><li><a href="tools.html#budget">Trip Budget Calculator</a></li>
+        <li><a href="tools.html">Ski & Board Size Tools</a></li><li><a href="gear.html">Gear Guide</a></li><li><a href="learn.html">Learn to Ski & Ride</a></li></ul></div>
+      <div><h4>Community</h4><ul>
+        <li><a href="contests.html">Contests & Prizes</a></li><li><a href="donate.html">Support SnowCow</a></li>
+        <li><a href="careers.html">Careers & Ambassadors</a></li><li><a href="advertise.html">Advertise & Sponsor</a></li><li><a href="advertise.html#partners">Partner With Us</a></li></ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer & Trademark</a></li><li><a href="sitemap.xml">Sitemap</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© <span data-year></span> SnowCow.com — All rights reserved. Original content, design and mascot artwork. “SnowCow” is used as the site name for this independent publication and is not affiliated with, endorsed by, or connected to any similarly named product, company, resort or trademark owner. All third-party names, logos and marks (e.g. ski resorts, pass products, gear brands, YouTube creators) belong to their respective owners and are used for identification only. <a href="disclaimer.html">Full disclosure</a>.</div>
+      <div>Snow forecasts: weather-model data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Forecasts are estimates — always check official resort reports and avalanche bulletins. Some links may be affiliate links; we may earn a commission at no extra cost to you.</div>
+      <div><a href="https://web.works/contact" target="_blank" rel="noopener">Interested in this website / domain name / sponsorship / advertising / partnership? Contact us.</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta"><a class="btn btn-primary" href="trip-planner.html">🎿 Get Free Ski Trip Quotes</a></div>
+<button class="icon-btn to-top" id="toTop" aria-label="Back to top" style="background:var(--navy)">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="cookie" id="cookieBar" role="dialog" aria-label="Cookie consent">
+  <p>We use cookies for analytics and to show ads (including personalised ads from Google). See our <a href="privacy.html">Privacy Policy</a>.</p>
+  <div style="display:flex;gap:8px"><button class="btn btn-sm btn-ghost" data-consent="no">Essential only</button><button class="btn btn-sm btn-primary" data-consent="yes">Accept all</button></div>
+</div>
+
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="lm-h">
+  <div class="modal-box">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <div style="font-size:2.4rem">🎁</div>
+    <h3 id="lm-h" style="font-size:1.9rem">Before you go — want a free custom ski trip quote?</h3>
+    <p class="muted">Tell us where & when. Vetted travel partners send you options — often cheaper than booking direct. Plus you get our <b>Ultimate Ski Trip Checklist</b>.</p>
+    <form class="sc-form" data-subject="Exit-intent quick quote" data-success="✅ Got it! Your checklist is ready and a trip specialist will reach out within 24–48h.">
+      <div class="field"><label for="lmName">Name <span class="req">*</span></label><input id="lmName" name="name" required autocomplete="name"></div>
+      <div class="field"><label for="lmEmail">Email <span class="req">*</span></label><input id="lmEmail" type="email" name="email" required autocomplete="email"></div>
+      <div class="field"><label for="lmWhere">Dream destination</label><input id="lmWhere" name="destination" placeholder="e.g. Whistler, the Alps, Japan…"></div>
+      <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to be contacted about my trip and to the <a href="privacy.html">Privacy Policy</a>.</label>
+      <button class="btn btn-primary btn-block mt1" type="submit">Send me options + checklist</button>
+    </form>
+    <p class="form-note mt1"><a href="guides/ski-trip-packing-checklist.html">Just want the checklist? Open it here →</a></p>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/resorts.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/snow.js"></script>
+<script src="assets/js/tools.js"></script>
+</body>
+</html>
