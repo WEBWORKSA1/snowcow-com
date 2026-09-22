@@ -1,0 +1,96 @@
+<!--META {"title":"Ski Tools: Ski Length & Snowboard Size Calculators, Trip Budget, Resort Compare | SnowCow","description":"Free ski length calculator, snowboard size calculator, ski trip budget calculator and a live side-by-side resort comparison with 7-day snow forecasts.","nav":"tools","crumb":"Tools","priority":"0.9","scripts":["tools.js"]} META-->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="{root}index.html">Home</a> › Tools</div>
+    <h1>Free Ski & Snowboard Tools</h1>
+    <p>Size your gear, budget your trip and compare resorts side-by-side with live snow forecasts.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-light btn-sm" href="#compare">⚖️ Compare</a><a class="btn btn-light btn-sm" href="#budget">💸 Budget</a><a class="btn btn-light btn-sm" href="#ski">🎿 Ski length</a><a class="btn btn-light btn-sm" href="#snowboard">🏂 Board size</a></div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <h2>⚖️ Compare resorts side-by-side</h2>
+    <p class="muted">Pick up to three resorts — we’ll pull the live 7-day forecast for each.</p>
+    <div id="compareTool">
+      <div class="grid g3"><div><label for="c1">Resort 1</label><select id="c1" data-cmp></select></div><div><label for="c2">Resort 2</label><select id="c2" data-cmp></select></div><div><label for="c3">Resort 3</label><select id="c3" data-cmp></select></div></div>
+      <div id="compareOut" class="mt2"></div>
+    </div>
+  </div>
+</section>
+
+<div class="ad-slot" data-ad="leaderboard"></div>
+
+<section id="budget" class="section-alt">
+  <div class="container">
+    <h2>💸 Ski trip budget calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="budgetCalc">
+        <div class="row three">
+          <div class="field"><label for="bPeople">People</label><input id="bPeople" type="number" min="1" value="2"></div>
+          <div class="field"><label for="bNights">Nights</label><input id="bNights" type="number" min="1" value="6"></div>
+          <div class="field"><label for="bDays">Ski days</label><input id="bDays" type="number" min="1" value="5"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="bLodging">Lodging per room / night ($)</label><input id="bLodging" type="number" min="0" value="250"></div>
+          <div class="field"><label for="bLift">Lift ticket per day ($)</label><input id="bLift" type="number" min="0" value="150"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="bTravel">Travel per person ($)</label><input id="bTravel" type="number" min="0" value="450"></div>
+          <div class="field"><label for="bFood">Food & après per person / day ($)</label><input id="bFood" type="number" min="0" value="80"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label class="check"><input type="checkbox" id="bRent" checked> Rentals ($/day)</label><input id="bRentCost" type="number" min="0" value="60"></div>
+          <div class="field"><label class="check"><input type="checkbox" id="bLessons"> Lessons ($ total pp)</label><input id="bLessonCost" type="number" min="0" value="400"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="bIns" checked> Include travel insurance estimate</label>
+        <button class="btn btn-primary mt1" type="submit">Calculate</button>
+      </form>
+      <div class="card"><h3>Your estimated trip cost</h3><div id="budOut"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ski">
+  <div class="container">
+    <h2>🎿 Ski length calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="skiCalc">
+        <div class="row three">
+          <div class="field"><label for="skiUnit">Units</label><select id="skiUnit"><option value="metric">cm / kg</option><option value="imperial">in / lb</option></select></div>
+          <div class="field"><label for="skiHeight">Height</label><input id="skiHeight" type="number" min="80" placeholder="175"></div>
+          <div class="field"><label for="skiWeight">Weight</label><input id="skiWeight" type="number" min="15" placeholder="72"></div>
+        </div>
+        <div class="row two">
+          <div class="field"><label for="skiLevel">Ability</label><select id="skiLevel"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option><option value="expert">Expert</option></select></div>
+          <div class="field"><label for="skiTerrain">Favourite terrain</label><select id="skiTerrain"><option value="groomers">Groomed runs</option><option value="allmountain" selected>All-mountain</option><option value="powder">Powder / off-piste</option><option value="park">Park & tricks</option></select></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Get my ski length</button>
+      </form>
+      <div class="card"><h3>Your result</h3><div id="skiOut"><p class="muted">Enter your height to see your recommended ski length range.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="snowboard" class="section-alt">
+  <div class="container">
+    <h2>🏂 Snowboard size calculator</h2>
+    <div class="grid g2">
+      <form class="card" id="sbCalc">
+        <div class="row three">
+          <div class="field"><label for="sbUnit">Units</label><select id="sbUnit"><option value="metric">cm / kg</option><option value="imperial">in / lb</option></select></div>
+          <div class="field"><label for="sbHeight">Height</label><input id="sbHeight" type="number" min="80" placeholder="178"></div>
+          <div class="field"><label for="sbWeight">Weight</label><input id="sbWeight" type="number" min="15" placeholder="75"></div>
+        </div>
+        <div class="row three">
+          <div class="field"><label for="sbBoot">Boot size (US men’s)</label><input id="sbBoot" type="number" min="3" max="16" step="0.5" placeholder="10"></div>
+          <div class="field"><label for="sbStyle">Riding style</label><select id="sbStyle"><option value="freestyle">Freestyle / park</option><option value="allmountain" selected>All-mountain</option><option value="freeride">Freeride / powder</option></select></div>
+          <div class="field"><label for="sbLevel">Ability</label><select id="sbLevel"><option value="beginner">Beginner</option><option value="intermediate" selected>Intermediate</option><option value="advanced">Advanced</option></select></div>
+        </div>
+        <button class="btn btn-primary" type="submit">Get my board size</button>
+      </form>
+      <div class="card"><h3>Your result</h3><div id="sbOut"><p class="muted">Enter your height and weight to see your board length range.</p></div></div>
+    </div>
+    <p class="notice mt2">Calculators give general starting points. Binding (DIN) settings must always be set by a certified ski technician.</p>
+  </div>
+</section>

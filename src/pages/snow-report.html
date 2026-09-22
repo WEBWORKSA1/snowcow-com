@@ -1,0 +1,67 @@
+<!--META {"title":"Snow Report & 7-Day Snow Forecast for 55+ Ski Resorts | SnowCow","description":"Live snow report and 7-day snowfall forecast for Whistler, Vail, Zermatt, Niseko, Chamonix and 50+ more ski resorts. Last 48h snowfall, temperatures, wind and conditions.","nav":"snow","crumb":"Snow Report","priority":"0.9"} META-->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="{root}index.html">Home</a> › Snow Report</div>
+    <h1 id="repName">Snow Report</h1>
+    <p id="repLoc">Loading resort…</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <span id="repPass"></span>
+      <span class="chip" style="background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.2)" id="repElev"></span>
+      <button class="fav-btn" id="repFav" style="color:#fff;border-color:rgba(255,255,255,.35)">☆ Save to My Snow</button>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:28px" id="snowReport">
+  <div class="container">
+    <div class="filters" style="grid-template-columns:1fr">
+      <div class="grid g3" style="align-items:end">
+        <div style="position:relative"><label for="reportSearch">Search resorts</label><input id="reportSearch" type="search" placeholder="Type a resort or country…" autocomplete="off"></div>
+        <div><label for="resortSelect">Or pick from the list</label><select id="resortSelect"></select></div>
+        <div><label>Units</label><div class="toggle-group units-toggle" role="group" aria-label="Units"><button data-u="metric">cm / °C</button><button data-u="imperial">in / °F</button></div></div>
+      </div>
+      <div><b>My Snow:</b> <span class="chips" id="myFavs" style="display:inline-flex"></span></div>
+    </div>
+
+    <div class="article">
+      <div>
+        <div class="card">
+          <div class="section-head" style="margin-bottom:10px"><h2 style="margin:0">Right now</h2><span id="repWx" class="chip"></span></div>
+          <div class="snow-num" id="repNow"></div>
+          <p class="callout mt2" id="repVerdict" style="margin-bottom:0"></p>
+        </div>
+
+        <div class="card mt2">
+          <h2>Snowfall: past 2 days + next 7 days</h2>
+          <div class="bars" id="repBars" aria-label="Daily snowfall chart"></div>
+          <div class="day-labels" id="repDays"></div>
+          <div class="table-wrap mt2"><table class="table" id="repTable"></table></div>
+          <p class="form-note mt1">Forecasts: Open-Meteo weather-model data, adjusted to mid-mountain elevation. Modelled snow depth is an estimate, not the resort-measured base. Always check the resort’s official report & local avalanche bulletin.</p>
+        </div>
+
+        <div class="ad-slot rect" data-ad="inArticle"></div>
+
+        <div class="cta-band mt2">
+          <div><h2 style="margin:0 0 6px">Snow’s coming — lock in your trip</h2><p>Get free quotes for lodging, lift tickets, rentals & lessons here from vetted ski travel specialists.</p></div>
+          <div class="actions"><a class="btn btn-light" id="repQuote" href="{root}trip-planner.html">Get free quotes →</a></div>
+        </div>
+
+        <h2 class="mt3">Nearby resorts</h2>
+        <div class="grid g2" id="repNearby"></div>
+      </div>
+
+      <aside class="stack">
+        <div class="card"><h3>Best for</h3><div class="chips" id="repTags"></div></div>
+        <div class="card"><h3>🔔 Powder alerts</h3><p>Get one email when a big storm is forecast for your favourite resorts.</p>
+          <form class="sc-form" data-subject="Powder alert signup (snow report)" data-success="✅ Alert set! We’ll email you when a storm lines up.">
+            <div class="field"><label for="paEmail">Email <span class="req">*</span></label><input id="paEmail" type="email" name="email" required></div>
+            <div class="field"><label for="paResorts">Resorts to watch</label><input id="paResorts" name="resorts" list="resortList" placeholder="e.g. Niseko United, Japan"><datalist id="resortList"></datalist></div>
+            <button class="btn btn-primary btn-block" type="submit">Create alert</button>
+          </form>
+        </div>
+        <div class="ad-slot rect" data-ad="sidebar" style="padding:0"></div>
+        <div class="card"><h3>Tools</h3><ul class="list-check"><li><a href="{root}tools.html#compare">Compare 3 resorts</a></li><li><a href="{root}tools.html#budget">Trip budget calculator</a></li><li><a href="{root}tools.html#ski">Ski length calculator</a></li><li><a href="{root}guides/best-time-to-ski.html">Best time to ski</a></li></ul></div>
+      </aside>
+    </div>
+  </div>
+</section>
