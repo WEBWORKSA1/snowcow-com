@@ -1,0 +1,63 @@
+<!--META {"title":"Support SnowCow — Donate to Keep Snow Forecasts Free | SnowCow","description":"Support SnowCow with a one-time or monthly contribution. Your support funds live forecasts, operations, promotions, new talent, contests and prizes.","nav":"donate","crumb":"Support","priority":"0.7","nomodal":true} META-->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="{root}index.html">Home</a> › Support</div>
+    <h1>❤️ Keep SnowCow free for every skier</h1>
+    <p>SnowCow is independent. Your support pays for live forecast infrastructure, new guides, local snow reporters, marketing, contests and prizes — every dollar is reinvested in the community.</p>
+  </div>
+</section>
+<section>
+  <div class="container lead-wrap">
+    <div class="card" id="donateBox">
+      <div class="section-head" style="margin-bottom:12px"><h2 style="margin:0">Choose your support</h2>
+        <div class="toggle-group" id="donFreq" role="group" aria-label="Frequency"><button class="on" data-f="one-time">One-time</button><button data-f="monthly">Monthly</button></div></div>
+      <div class="tiers">
+        <div class="tier" data-amt="5" tabindex="0"><div style="font-size:1.6rem">❄️</div><div class="amt">$5</div><small class="muted">Flurry — buys a coffee for the team</small></div>
+        <div class="tier on" data-amt="15" tabindex="0"><div style="font-size:1.6rem">🌨</div><div class="amt">$15</div><small class="muted">Powder Day — funds a week of live forecasts</small></div>
+        <div class="tier" data-amt="50" tabindex="0"><div style="font-size:1.6rem">🏔</div><div class="amt">$50</div><small class="muted">Summit — funds a new in-depth guide</small></div>
+        <div class="tier" data-amt="100" tabindex="0"><div style="font-size:1.6rem">🏆</div><div class="amt">$100</div><small class="muted">Legend — sponsors a contest prize</small></div>
+      </div>
+      <div class="row two mt2"><div class="field"><label for="donAmount">Custom amount (USD)</label><input id="donAmount" type="number" min="1" value="15"></div><div class="field"><label>Your selection</label><div class="kpi" id="donSummary" style="font-size:1.8rem;padding-top:6px">$15 one-time</div></div></div>
+
+      <h3 class="mt2">Pay instantly</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-secondary" data-pay="paypal" href="#">PayPal</a>
+        <a class="btn btn-secondary" data-pay="stripe" href="#">Card (Stripe)</a>
+        <a class="btn btn-secondary" data-pay="buymeacoffee" href="#">☕ Buy Me a Coffee</a>
+        <a class="btn btn-secondary" data-pay="kofi" href="#">Ko-fi</a>
+        <a class="btn btn-secondary" data-pay="patreon" href="#">Patreon (monthly)</a>
+      </div>
+      <p class="form-note mt1" id="payLinksNote" style="display:none">Secure online payment links are being set up. Pledge below and we’ll send you a secure payment link personally within 24 hours.</p>
+
+      <hr>
+      <h3>Pledge your support</h3>
+      <p class="muted">Prefer invoice, bank transfer, corporate matching or an in-kind donation (gear, lodging, prizes)? Pledge here and we’ll follow up.</p>
+      <form class="sc-form" data-subject="💖 Donation pledge" data-success="💖 Thank you! Your pledge is received — we’ll email you a secure payment link and receipt details within 24 hours.">
+        <input type="hidden" name="amount_usd" id="pledgeAmount" value="15"><input type="hidden" name="frequency" id="pledgeFreq" value="one-time">
+        <div class="row two"><div class="field"><label for="pdName">Name <span class="req">*</span></label><input id="pdName" name="name" required></div><div class="field"><label for="pdEmail">Email <span class="req">*</span></label><input id="pdEmail" type="email" name="email" required></div></div>
+        <div class="row two"><div class="field"><label for="pdType">Support type</label><select id="pdType" name="support_type"><option>Money donation</option><option>Corporate / matching gift</option><option>In-kind (gear, lodging, prizes)</option><option>Volunteer time / skills</option></select></div>
+        <div class="field"><label for="pdUse">Direct my support to</label><select id="pdUse" name="direct_to"><option>Where it’s needed most</option><option>Operations & forecasts</option><option>Promotions & marketing</option><option>Hiring talent & reporters</option><option>Contests & prizes</option></select></div></div>
+        <div class="field"><label for="pdMsg">Message (optional)</label><textarea id="pdMsg" name="message" style="min-height:80px"></textarea></div>
+        <label class="check"><input type="checkbox" name="public_thanks" value="yes"> Thank me publicly on the supporters wall.</label>
+        <button class="btn btn-primary mt1" type="submit">❤️ Send my pledge</button>
+      </form>
+    </div>
+    <aside class="stack">
+      <div class="card">
+        <h3>Season goal</h3>
+        <div class="progress"><span id="goalBar"></span></div>
+        <p class="form-note mt1" id="goalText"></p>
+      </div>
+      <div class="card">
+        <h3>Where your money goes</h3>
+        <div class="alloc"><span style="width:35%;background:#1f6feb"></span><span style="width:25%;background:#ff5a36"></span><span style="width:20%;background:#16a34a"></span><span style="width:20%;background:#ffb703"></span></div>
+        <div class="legend"><span><i style="background:#1f6feb"></i>35% Operations & forecasts</span><span><i style="background:#ff5a36"></i>25% Promotion & marketing</span><span><i style="background:#16a34a"></i>20% Hiring talent</span><span><i style="background:#ffb703"></i>20% Contests & prizes</span></div>
+      </div>
+      <div class="card"><h3>Supporter perks</h3><ul class="list-check"><li>Name on the supporters wall</li><li>Early access to contests</li><li>Monthly supporters: members-only deals newsletter</li><li>Legend tier: shout-out on socials</li></ul></div>
+      <p class="notice">SnowCow is an independent publication, not a registered charity; contributions are not tax-deductible unless stated otherwise in writing.</p>
+    </aside>
+  </div>
+</section>
+<section class="section-alt">
+  <div class="container"><h2>Supporters wall 💙</h2><p class="muted">Founding supporters will be listed here. Be the first!</p><div class="chips"><span class="chip">Your name here ❄️</span></div></div>
+</section>
