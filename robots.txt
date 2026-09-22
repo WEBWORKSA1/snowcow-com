@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /src/
+
+Sitemap: https://webworksa1.github.io/snowcow-com/sitemap.xml
