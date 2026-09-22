@@ -1,0 +1,135 @@
+<!--META {"title":"Free Ski Trip Quote — Custom Ski Vacation Packages | SnowCow","description":"Get free custom ski vacation quotes in 90 seconds. Lodging, lift tickets, rentals, lessons, flights and transfers from vetted ski travel specialists. No fees, no obligation.","nav":"plan","crumb":"Free Trip Quote","priority":"1.0","nomodal":true,"faq":[["Is the ski trip quote free?","Yes. SnowCow's trip quote service is 100% free with no obligation to book."],["Who will contact me?","A SnowCow trip coordinator reviews your request and shares it only with vetted ski travel specialists relevant to your destination."],["How fast will I get options?","Most travellers receive first options within 24-48 hours."]]} META-->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumbs"><a href="{root}index.html">Home</a> › Free Trip Quote</div>
+    <span class="eyebrow">⏱ 90 seconds · 100% free · no obligation</span>
+    <h1 class="mt1">Get free custom ski trip quotes</h1>
+    <p>Tell us your dream trip. Vetted ski travel specialists build tailored packages — lodging, lift tickets, rentals, lessons, flights & transfers — and compete for your booking.</p>
+  </div>
+</section>
+
+<section style="padding-top:30px">
+  <div class="container lead-wrap">
+    <div class="card" id="tripPlanner">
+      <div class="section-head" style="margin-bottom:10px"><h2 style="margin:0;font-size:1.8rem">Plan my trip</h2><span class="chip">Step <span id="stepCount">1 of 5</span></span></div>
+      <div class="stepper" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+      <form class="sc-form" data-subject="🎿 NEW SKI TRIP LEAD" data-thanks="{root}thanks.html?f=trip">
+        <!-- Step 1 -->
+        <div class="step">
+          <h3>1. Where & when?</h3>
+          <div class="field"><label for="destination">Destination or resort <span class="req">*</span></label><input id="destination" name="destination" list="resortList" required placeholder="e.g. Whistler, Zermatt, Niseko… or “Help me choose”"><datalist id="resortList"></datalist></div>
+          <div class="row two">
+            <div class="field"><label for="region">Region preference</label><select id="region" name="region_preference"><option>No preference</option><option>North America</option><option>Europe (Alps)</option><option>Japan / Asia</option><option>Southern Hemisphere</option></select></div>
+            <div class="field"><label for="startDate">Start date <span class="req">*</span></label><input id="startDate" type="date" name="start_date" required></div>
+          </div>
+          <div class="row two">
+            <div class="field"><label for="nights">Nights <span class="req">*</span></label><select id="nights" name="nights" required><option value="">Select…</option><option>2–3</option><option>4–5</option><option>6–7</option><option>8–10</option><option>11–14</option><option>15+</option></select></div>
+            <div class="field"><label for="flex">Date flexibility</label><select id="flex" name="date_flexibility"><option>Exact dates</option><option>± 3 days</option><option>± 1 week</option><option>Any time that month</option></select></div>
+          </div>
+          <div class="step-nav"><span></span><button type="button" class="btn btn-primary" data-next>Next: who’s going →</button></div>
+        </div>
+        <!-- Step 2 -->
+        <div class="step">
+          <h3>2. Who’s going?</h3>
+          <div class="row three">
+            <div class="field"><label for="adults">Adults <span class="req">*</span></label><input id="adults" type="number" name="adults" min="1" value="2" required></div>
+            <div class="field"><label for="kids">Children</label><input id="kids" type="number" name="children" min="0" value="0"></div>
+            <div class="field"><label for="kidAges">Children’s ages</label><input id="kidAges" name="children_ages" placeholder="e.g. 6, 9"></div>
+          </div>
+          <div class="row two">
+            <div class="field"><label for="ability">Group ability <span class="req">*</span></label><select id="ability" name="ability" required><option value="">Select…</option><option>First-timers</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Expert / off-piste</option><option>Mixed abilities</option></select></div>
+            <div class="field"><label for="sport">Ski or ride?</label><select id="sport" name="sport"><option>Ski</option><option>Snowboard</option><option>Both</option><option>Some non-skiers</option></select></div>
+          </div>
+          <div class="field"><label for="tripType">Trip type</label><select id="tripType" name="trip_type"><option>Family holiday</option><option>Couples getaway</option><option>Friends / group trip</option><option>Solo</option><option>Corporate / team event</option><option>School / club trip</option><option>Honeymoon</option></select></div>
+          <div class="step-nav"><button type="button" class="btn btn-ghost" data-prev>← Back</button><button type="button" class="btn btn-primary" data-next>Next: what you need →</button></div>
+        </div>
+        <!-- Step 3 -->
+        <div class="step">
+          <h3>3. What should we include?</h3>
+          <div class="checks">
+            <label class="pill-check"><input type="checkbox" name="include" value="Lodging" checked><span>🏨 Lodging</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Lift tickets" checked><span>🎟 Lift tickets</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Rentals"><span>🎿 Ski/board rentals</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Lessons"><span>👩‍🏫 Lessons</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Flights"><span>✈️ Flights</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Transfers"><span>🚐 Airport transfers</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Travel insurance"><span>🛡 Travel insurance</span></label>
+            <label class="pill-check"><input type="checkbox" name="include" value="Childcare"><span>🧸 Childcare / kids club</span></label>
+          </div>
+          <div class="row two mt2">
+            <div class="field"><label for="lodging">Lodging style</label><select id="lodging" name="lodging_type"><option>Hotel</option><option>Condo / apartment</option><option>Private chalet</option><option>Catered chalet</option><option>All-inclusive</option><option>Ski-in / ski-out only</option><option>Budget / hostel</option></select></div>
+            <div class="field"><label for="airport">Departure city / airport</label><input id="airport" name="departure_airport" placeholder="e.g. Toronto YYZ, London LHR"></div>
+          </div>
+          <div class="step-nav"><button type="button" class="btn btn-ghost" data-prev>← Back</button><button type="button" class="btn btn-primary" data-next>Next: budget →</button></div>
+        </div>
+        <!-- Step 4 -->
+        <div class="step">
+          <h3>4. Budget & priorities</h3>
+          <div class="field"><label for="budget">Budget per person (excluding flights) <span class="req">*</span></label><select id="budget" name="budget_per_person" required><option value="">Select…</option><option>Under $1,000</option><option>$1,000 – $2,000</option><option>$2,000 – $3,500</option><option>$3,500 – $5,000</option><option>$5,000 – $10,000</option><option>$10,000+</option></select></div>
+          <label>What matters most? (pick any)</label>
+          <div class="checks">
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Best snow"><span>❄️ Best snow</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Lowest price"><span>💰 Lowest price</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Ski-in/ski-out"><span>⛷ Ski-in/ski-out</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Nightlife"><span>🎉 Après & nightlife</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Spa & wellness"><span>🧖 Spa & wellness</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Kid-friendly"><span>👶 Kid-friendly</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Fine dining"><span>🍷 Fine dining</span></label>
+            <label class="pill-check"><input type="checkbox" name="priorities" value="Off-piste / heli"><span>🚁 Off-piste / heli</span></label>
+          </div>
+          <div class="field mt2"><label for="stage">Where are you in planning?</label><select id="stage" name="booking_stage"><option>Ready to book in the next 2 weeks</option><option>Booking within 1–2 months</option><option>Just researching</option></select></div>
+          <div class="step-nav"><button type="button" class="btn btn-ghost" data-prev>← Back</button><button type="button" class="btn btn-primary" data-next>Last step →</button></div>
+        </div>
+        <!-- Step 5 -->
+        <div class="step">
+          <h3>5. Where should we send your quotes?</h3>
+          <div class="row two">
+            <div class="field"><label for="tpName">Full name <span class="req">*</span></label><input id="tpName" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="tpEmail">Email <span class="req">*</span></label><input id="tpEmail" type="email" name="email" required autocomplete="email"></div>
+          </div>
+          <div class="row two">
+            <div class="field"><label for="tpPhone">Phone / WhatsApp</label><input id="tpPhone" type="tel" name="phone" autocomplete="tel" placeholder="Optional — faster replies"></div>
+            <div class="field"><label for="tpCountry">Country of residence <span class="req">*</span></label><input id="tpCountry" name="country" required autocomplete="country-name"></div>
+          </div>
+          <div class="row two">
+            <div class="field"><label for="tpContact">Preferred contact</label><select id="tpContact" name="preferred_contact"><option>Email</option><option>Phone call</option><option>WhatsApp / text</option></select></div>
+            <div class="field"><label for="tpTime">Best time to reach you</label><select id="tpTime" name="best_time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></div>
+          </div>
+          <div class="field"><label for="tpNotes">Anything else?</label><textarea id="tpNotes" name="notes" placeholder="Special occasions, accessibility needs, must-have resorts, dietary needs…"></textarea></div>
+          <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree SnowCow may share my request with relevant ski travel partners to prepare quotes, per the <a href="{root}privacy.html" target="_blank">Privacy Policy</a>. <span class="req">*</span></label>
+          <label class="check mt1"><input type="checkbox" name="newsletter_opt_in" value="yes" checked> Send me powder alerts & exclusive deals (unsubscribe anytime).</label>
+          <div class="step-nav"><button type="button" class="btn btn-ghost" data-prev>← Back</button><button type="submit" class="btn btn-primary">🎿 Get my free quotes</button></div>
+        </div>
+      </form>
+    </div>
+
+    <aside class="stack">
+      <div class="card trust">
+        <h3>Why plan with SnowCow?</h3>
+        <ul>
+          <li>✅ <span><b>Free & no obligation</b> — you never pay us a cent.</span></li>
+          <li>🏆 <span><b>Vetted specialists only</b> — licensed ski travel pros.</span></li>
+          <li>💸 <span><b>Package savings</b> — bundled lodging + lifts often beat booking separately.</span></li>
+          <li>⚡ <span><b>Fast</b> — first options usually within 24–48 hours.</span></li>
+          <li>🔒 <span><b>Private</b> — we never sell your data. Shared only to prepare your quote.</span></li>
+        </ul>
+      </div>
+      <div class="dark-band">
+        <h3 style="color:#fff">Groups of 8+?</h3>
+        <p>Corporate retreats, clubs, schools and weddings get dedicated group pricing and a single coordinator.</p>
+        <a class="btn btn-primary btn-sm" href="#tripPlanner" onclick="document.getElementById('tripType').value='Corporate / team event'">Request group rates</a>
+      </div>
+      <div class="card"><h3>Are you a ski travel business?</h3><p>Receive qualified, ready-to-book trip leads in your destination.</p><a class="btn btn-secondary btn-sm" href="{root}advertise.html#leads">Become a lead partner</a></div>
+    </aside>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container" style="max-width:860px">
+    <h2 class="center">Trip quote FAQ</h2>
+    <details class="faq"><summary>Is the ski trip quote free?</summary><p>Yes — 100% free with no obligation to book. Our partners pay us, never you.</p></details>
+    <details class="faq"><summary>Who will contact me?</summary><p>A SnowCow trip coordinator reviews your request and shares it only with vetted specialists relevant to your destination. You won’t be spammed.</p></details>
+    <details class="faq"><summary>How fast will I get options?</summary><p>Most travellers receive first options within 24–48 hours; peak holiday dates can take a little longer.</p></details>
+    <details class="faq"><summary>Can you help me choose where to go?</summary><p>Definitely. Type “Help me choose” as the destination and tell us your priorities — we’ll suggest resorts that fit your budget and ability.</p></details>
+  </div>
+</section>
